@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="jieba.NET" Version="0.39.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Accord.MachineLearning" Version="3.8.0" />
+  </ItemGroup>
+
+</Project>
