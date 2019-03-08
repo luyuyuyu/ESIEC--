@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 using System.Linq;
@@ -13,34 +13,34 @@ class Document {
 
     public int ID;
 
-    // ====input====
+    // ====输入数据====
 
-    // can we find it on DianPing.com?
-    public bool openNow;
-    public bool openedOnce;
-    public bool noInformation;
+    // 大众点评上能否查询到该企业？
+    public bool 能查到正在营业;
+    public bool 能查到曾经营业;
+    public bool 无营业信息;
 
-    //did the reporter finish GPS positioning? 
-    public bool finish;
+    // 队员是否有成功的GPS定位？
+    public bool 有GPS定位;
 
-    // note
-    public string note;
+    // 备注文本
+    public string 备注文本;
 
-    // Note separated by word
-    public string[] noteSparated;
+    // 按词分开的备注文本
+    public string[] 备注词汇;
 
-    // eigenvectors from notes
-    public double[] noteEigenvectors;
+    // 备注转化得到的特征向量
+    public double[] 备注特征向量;
 
-    // all eigenvectors
-    public double[] eigenvectors;
+    // 全部特征向量
+    public double[] 特征向量;
 
-    // ====output====
+    // ====输出数据====
 
-    public int contact;
-    public static string[] explaination of contact = {
-        "打不通电话", "打通了但拒访", "打通了但有事", "其他"//"cannot phone them", "can contact by phone but rejected"
-    };                                                //"can contact but the are busy and cannot be researched now" "else"
+    public int 通讯情况;
+    public static string[] 通讯情况说明 = {
+        "打不通电话", "打通了但拒访", "打通了但有事", "其他"
+    };
 
     public int 存在状况;
     public static string[] 存在状况说明 = {
